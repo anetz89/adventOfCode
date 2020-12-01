@@ -1,3 +1,3 @@
 export function aoc (input: any): string {
-	return 'hello';
+    return 'hello';
 }
