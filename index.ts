@@ -1,4 +1,5 @@
-import { aoc1, aoc2 } from './src/aoc01/main';
+import { aoc01 } from './src/aoc01/main';
 
-console.log(aoc1(2) === 32064);
-console.log(aoc2(3));
+console.log('######## AOC 01 ######################');
+console.log('AOC 01 part 1: ' + aoc01(2));
+console.log('AOC 01 part 2: ' + aoc01(3));

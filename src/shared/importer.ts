@@ -12,7 +12,7 @@ export function read(input: string): string[] {
 
 	const result = data.split(/\r?\n/);
 
-	console.log('read in file with ' + result.length + ' elements')
+	// console.log('read in file with ' + result.length + ' elements')
 
 	return result;
 }
@@ -21,7 +21,7 @@ export function readNumberList(input: string): number[] {
 	const list = read(input);
 
 	if (!list) {
-		console.error('no list inserted');
+		console.error('no list available');
 		return [];
 	}
 
