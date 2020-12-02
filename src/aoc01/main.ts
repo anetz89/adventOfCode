@@ -18,7 +18,7 @@ export function aoc01(amountOfNumbers: number): any {
 }
 
 function findMatch(list: number[], maxDepth: number, result: number[], potentialResult: number[] = []): boolean {
-    const matchElem = list.find((potentialElem) => {
+    const matchElem = list.find((potentialElem, elemIndex) => {
         const sum = getSum(potentialResult, potentialElem);
 
         if (maxDepth === 1) {
@@ -27,7 +27,7 @@ function findMatch(list: number[], maxDepth: number, result: number[], potential
         }
         // maxDepth not reached, search for next candiate if not > 2020
         if (sum <= 2020) {
-            return findMatch(list, maxDepth - 1, result, [...potentialResult, potentialElem]);
+            return findMatch(list.slice(elemIndex), maxDepth - 1, result, [...potentialResult, potentialElem]);
         }
 
         // > 2020
