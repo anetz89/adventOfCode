@@ -27,7 +27,7 @@ function findMatch(list: number[], maxDepth: number, result: number[], potential
         }
         // maxDepth not reached, search for next candiate if not > 2020
         if (sum <= 2020) {
-            return findMatch(list.slice(elemIndex), maxDepth - 1, result, [...potentialResult, potentialElem]);
+            return findMatch(list, maxDepth - 1, result, [...potentialResult, potentialElem]);
         }
 
         // > 2020
