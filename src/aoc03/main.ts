@@ -1,7 +1,7 @@
-import { read } from '../shared/importer';
+import { readStringList } from '../shared/importer';
 
 export function aoc03 (slopes: number[][]): number {
-    const pattern: string[] = read('./assets/aoc03.txt');
+    const pattern: string[] = readStringList('./assets/aoc03.txt');
 
     return slopes.map((slope): number => getTreeCount(pattern, slope))
         .reduce((a: number, b: number) => a * b);

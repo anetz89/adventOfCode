@@ -1,6 +1,6 @@
-import  { read } from '../shared/importer';
+import  { readStringList } from '../shared/importer';
 
 export function aoc02 (): string {
-    const list: string[] = read('./assets/aoc02.txt');
+    const list: string[] = readStringList('./assets/aoc02.txt');
     return list[0];
 }

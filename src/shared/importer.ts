@@ -1,29 +1,24 @@
 import fs from 'fs';
 
 
-export function read(input: string): string[] {
-    let data = '';
-
+export function read(input: string): string {
     try {
-        data = fs.readFileSync(input, {encoding:'utf8'});
+        return fs.readFileSync(input, {encoding:'utf8'});
     } catch (err) {
         console.error(err);
     }
+    return '';
+}
 
-    const result = data.split(/\r?\n/);
-
-    // console.log('read in file with ' + result.length + ' elements')
-
-    return result;
+export function readStringList(input: string): string[] {
+    return read(input).split(/\r?\n/);
 }
 
 export function readNumberList(input: string): number[] {
-    const list = read(input);
+    return readStringList(input).map(elem => parseInt(elem || '0', 10));
+}
 
-    if (!list) {
-        console.error('no list available');
-        return [];
-    }
 
-    return list.map(elem => parseInt(elem || '0', 10));
+export function readStringBlock(input: string): string[] {
+    return read(input).split(/\r?\n\r?\n/);
 }
