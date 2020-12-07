@@ -3,18 +3,27 @@
 // import { aoc03 } from './src/aoc03/main';
 // import { aoc04 } from './src/aoc04/main';
 // import { aoc05 } from './src/aoc05/main';
-import { aoc06 } from './src/aoc06/main';
+// import { aoc06 } from './src/aoc06/main';
+import { aoc07 } from './src/aoc07/main';
 
 console.time('execution_complete');
 
 
-console.log('######## AOC 06 ######################');
+console.log('######## AOC 07 ######################');
 console.time('execution_part1');
-console.log('PART1: ' + aoc06(true));
+console.log('PART1: ' + aoc07(true));
 console.timeEnd('execution_part1');
 console.time('execution_part2');
-console.log('PART2: ' + aoc06());
+console.log('PART2: ' + aoc07());
 console.timeEnd('execution_part2');
+
+// console.log('######## AOC 06 ######################');
+// console.time('execution_part1');
+// console.log('PART1: ' + aoc06(true));
+// console.timeEnd('execution_part1');
+// console.time('execution_part2');
+// console.log('PART2: ' + aoc06());
+// console.timeEnd('execution_part2');
 
 // console.log('######## AOC 05 ######################');
 // console.time('execution_part1');
