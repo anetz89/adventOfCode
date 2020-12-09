@@ -7,8 +7,9 @@ export function aoc07(findBags = false): any {
     if (findBags) {
         return findContainingBags(input.split(/\r?\n/).map(rule => rule.split(' bags contain ')), 'shiny gold', new Set()).size;
     }
-    // return countBags(input.split(/\r?\n/).map(rule => rule.split(' bags contain ')), 'shiny gold') - 1;
+    // tslint:disable-next-line
     return eval(countBags(input.replace(/\n/g, ''), 'shiny gold')) - 1;
+    // return countBags(input.split(/\r?\n/).map(rule => rule.split(' bags contain ')), 'shiny gold') - 1;
 }
 
 function findContainingBags(ruleList: string[][], bag: string, bags: Set<string>): Set<string> {
@@ -20,28 +21,6 @@ function findContainingBags(ruleList: string[][], bag: string, bags: Set<string>
     }
     return bags;
 }
-
-
-// function countBags(ruleList: string[][], bag: string): number {
-//     const rule = ruleList.find(rule => rule[0] === bag);
-
-//     if (!rule) {
-//         return 1;
-//     }
-
-//     const bags = rule[1].split(/ bags?, /);
-
-//     let count = 1;
-
-//     for (let i = 0, l = bags.length; i < l; i += 1) {
-//         const amount = parseInt(bags[i].split(' ')[0], 10);
-
-//         if (amount) {
-//             count += amount * countBags(ruleList, bags[i].split(' ')[1] + ' ' + bags[i].split(' ')[2]);
-//         }
-//     }
-//     return count;
-// }
 
 function countBags(input: string, bagName: string): string {
     const content = getBagContent(input, bagName);
@@ -63,3 +42,24 @@ function getBagContent(input: string, bagName: string): any {
 
     return firstPart.substring(0, firstPart.indexOf('.')).replace(/\sbags?/g, '');
 }
+
+// function countBags(ruleList: string[][], bag: string): number {
+//     const rule = ruleList.find(rule => rule[0] === bag);
+
+//     if (!rule) {
+//         return 1;
+//     }
+
+//     const bags = rule[1].split(/ bags?, /);
+
+//     let count = 1;
+
+//     for (let i = 0, l = bags.length; i < l; i += 1) {
+//         const amount = parseInt(bags[i].split(' ')[0], 10);
+
+//         if (amount) {
+//             count += amount * countBags(ruleList, bags[i].split(' ')[1] + ' ' + bags[i].split(' ')[2]);
+//         }
+//     }
+//     return count;
+// }
