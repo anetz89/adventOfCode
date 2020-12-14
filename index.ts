@@ -8,17 +8,26 @@
 // import { aoc08 } from './src/aoc08/main';
 // import { aoc09 } from './src/aoc09/main';
 // import { aoc10 } from './src/aoc10/main';
-import { aoc11 } from './src/aoc11/main';
+// import { aoc11 } from './src/aoc11/main';
+import { aoc12 } from './src/aoc12/main';
 
 console.time('execution_complete');
 
-console.log('######## AOC 11 ######################');
+console.log('######## AOC 12 ######################');
 console.time('execution_part1');
-console.log('PART1: ' + aoc11(true));
+console.log('PART1: ' + aoc12(false));
 console.timeEnd('execution_part1');
 console.time('execution_part2');
-console.log('PART2: ' + aoc11());
+console.log('PART2: ' + aoc12());
 console.timeEnd('execution_part2');
+
+// console.log('######## AOC 11 ######################');
+// console.time('execution_part1');
+// console.log('PART1: ' + aoc11(true));
+// console.timeEnd('execution_part1');
+// console.time('execution_part2');
+// console.log('PART2: ' + aoc11());
+// console.timeEnd('execution_part2');
 
 // console.log('######## AOC 10 ######################');
 // console.time('execution_part1');
