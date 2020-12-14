@@ -10,14 +10,24 @@
 // import { aoc10 } from './src/aoc10/main';
 // import { aoc11 } from './src/aoc11/main';
 // import { aoc12 } from './src/aoc12/main';
-import { aoc13 } from './src/aoc13/main';
+// import { aoc13 } from './src/aoc13/main';
+import { aoc14 } from './src/aoc14/main';
 
 console.time('execution_complete');
 
-console.log('######## AOC 13 ######################');
+console.log('######## AOC 14 ######################');
 console.time('execution_part1');
-console.log('PART1: ' + aoc13());
+console.log('PART1: ' + aoc14(false));
 console.timeEnd('execution_part1');
+console.time('execution_part2');
+console.log('PART2: ' + aoc14());
+console.timeEnd('execution_part2');
+
+// console.log('######## AOC 13 ######################');
+// console.time('execution_part1');
+// console.log('PART1: ' + aoc13());
+// console.timeEnd('execution_part1');
+// console.log('PART2: is missing :(');
 
 // console.log('######## AOC 12 ######################');
 // console.time('execution_part1');
