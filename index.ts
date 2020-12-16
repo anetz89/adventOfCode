@@ -12,18 +12,28 @@
 // import { aoc12 } from './src/aoc12/main';
 // import { aoc13 } from './src/aoc13/main';
 // import { aoc14 } from './src/aoc14/main';
-import { aoc15 } from './src/aoc15/main';
+// import { aoc15 } from './src/aoc15/main';
+import { aoc16 } from './src/aoc16/main';
 
 console.time('execution_complete');
 
-console.log('######## AOC 15 ######################');
+console.log('######## AOC 16 ######################');
 console.time('execution_part1');
-console.log('PART1: ' + aoc15(2020));
+console.log('PART1: ' + aoc16(true));
 console.timeEnd('execution_part1');
 console.time('execution_part2');
 console.time('time for a coffee, what do you think?');
-console.log('PART2: ' + aoc15(30000000));
+console.log('PART2: ' + aoc16());
 console.timeEnd('execution_part2');
+
+// console.log('######## AOC 15 ######################');
+// console.time('execution_part1');
+// console.log('PART1: ' + aoc15(2020));
+// console.timeEnd('execution_part1');
+// console.time('execution_part2');
+// console.time('time for a coffee, what do you think?');
+// console.log('PART2: ' + aoc15(30000000));
+// console.timeEnd('execution_part2');
 
 // console.log('######## AOC 14 ######################');
 // console.time('execution_part1');
