@@ -19,9 +19,9 @@ export function aoc16 (searchForInvalidsOnly = false): number {
                 .reduce((a: number, b: number) => a * b);
 }
 
-function getDepartureIndices(ruleList: any[], ticketList: any[]): number[] {
+function getDepartureIndices(allRules: any[], ticketList: any[]): number[] {
     // start with all rules per ticket field
-    const ruleOptions = new Array(ticketList[0].length).fill(null).map(elem => ruleList);
+    const ruleOptions = new Array(ticketList[0].length).fill(null).map(elem => allRules);
 
     // remove all rules per field that do not match with scanned tickets
     ticketList.forEach(ticketValues => {
@@ -70,7 +70,7 @@ function findInvalidTickets(ruleList: any[], ticketList: any[]): number[] {
                 .filter(a => a);
 }
 
-function getInvalidTicketFilter(ruleList: any[]): Function {
+function getInvalidTicketFilter(ruleList: any[]): (a:number) => boolean {
     return function isInvalidTicket(ticketVal: number) {
         let invalid = true;
 
@@ -98,7 +98,7 @@ function parseRule(rule: string): any[] {
 }
 
 // rule ['departure', [[0, 3], [5,7]]]
-function isValid(ticketVal: Number, rule: any[]) {
+function isValid(ticketVal: number, rule: any[]) {
     return (ticketVal >= rule[1][0][0] && ticketVal <= rule[1][0][1]) ||
            (ticketVal >= rule[1][1][0] && ticketVal <= rule[1][1][1]);
 }
