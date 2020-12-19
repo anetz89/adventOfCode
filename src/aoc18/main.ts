@@ -15,6 +15,7 @@ function solve1(equation: string): number {
         return parseInt(equation, 10);
     }
 
+    // tslint:disable-next-line
     return solve1(eval(parseInt(parts[0], 10) + parts[1] + solve1(parts[2])) + ' ' + parts.slice(3).join(' '));
 }
 
@@ -29,6 +30,7 @@ function solve2(equation: string): number {
 
     const index = getCalcIndex(parts);
 
+    // tslint:disable-next-line
     return solve2(parts.slice(0, index - 1).join(' ') + ' ' + eval(parseInt(parts[index - 1], 10) + parts[index] + solve2(parts[index + 1])) + ' ' + parts.slice(index + 2).join(' '));
 }
 
