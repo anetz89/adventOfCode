@@ -14,17 +14,26 @@
 // import { aoc14 } from './src/aoc14/main';
 // import { aoc15 } from './src/aoc15/main';
 // import { aoc16 } from './src/aoc16/main';
-import { aoc17 } from './src/aoc17/main';
+// import { aoc17 } from './src/aoc17/main';
+import { aoc18 } from './src/aoc18/main';
 
 console.time('execution_complete');
 
-console.log('######## AOC 17 ######################');
+console.log('######## AOC 18 ######################');
 console.time('execution_part1');
-console.log('PART1: ' + aoc17(false));
+console.log('PART1: ' + aoc18(true));
 console.timeEnd('execution_part1');
 console.time('execution_part2');
-console.log('PART2: ' + aoc17());
+console.log('PART2: ' + aoc18());
 console.timeEnd('execution_part2');
+
+// console.log('######## AOC 17 ######################');
+// console.time('execution_part1');
+// console.log('PART1: ' + aoc17(false));
+// console.timeEnd('execution_part1');
+// console.time('execution_part2');
+// console.log('PART2: ' + aoc17());
+// console.timeEnd('execution_part2');
 
 // console.log('######## AOC 16 ######################');
 // console.time('execution_part1');
